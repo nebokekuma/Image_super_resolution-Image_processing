@@ -124,13 +124,13 @@ def streamlit_main():
     if(st.button('clear')):
        clear()
 
-    
+  
     
     if(st.button("Compare")):
            st.markdown("LR to HR Image Comparison")
            image_comparison(
-            img1=image_file,
-            img2= res,
+            img1 = f'inputs/{os.listdir("inputs/")[0]}',
+            img2= f'results/{os.listdir("results/")[0]}',
             label1="Before",
             label2="After",
             )
@@ -161,10 +161,20 @@ def save_image(image_file):
 def clear():
    for filname in os.listdir("results/"):
       os.remove(f'results/{filname}')
+
    for input_folder_filename in os.listdir("inputs/"):
       os.remove(f'inputs/{input_folder_filename}')
 
-
+def comparision_input_image():
+   return 
+# def output_loader(input_image_name):
+   
+#     for image in os.listdir("results/"):
+#        if image == f"{input_image_name}_out.png" or image == f"{input_image_name}_out.jpg" or image == f"{input_image_name}_out.jpeg":
+#         return image
+   
+   
+   
   
     # if (st.download_button(label='Download Upscaled Image', data=zipObj2)):
     #   st.success('Image Saved!')
@@ -189,10 +199,7 @@ def clear():
 #         [
 #             "RealESRGAN_x4plus",
 #             "RealESRNet_x4plus",
-#             "RealESRGAN_x4plus_anime_6B",
-#             "RealESRGAN_x2plus",
-#             "realesr-animevideov3",
-#             "realesr-general-x4v3"
+# 
 #         ]
 #     )
 
