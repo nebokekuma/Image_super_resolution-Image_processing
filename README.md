@@ -67,4 +67,5 @@ Results are in the `results` folder
 
 1) In the case of cuda memory out of bound error message, try to decrease the size of the input image or crop the image as necessary.
 2) It is better to use only a single input image to avoid any errors. Use the clear Button after every use to clear the images in the input folder provided in the GUI after every use. In the case of implementation via terminal manually empty out the input folder.
+3) Create a inputs folder and a results folder inside the Real-ESRGAN directory if it doesn't consist either of the folders or create one automatically
 
